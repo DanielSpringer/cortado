@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Cortado con Brio is a modern classical music landing page designed to promote concerts, bookings, and private events."
+    />
+    <title>Cortado con Brio | Chamber music, reframed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .hero,
+      .section {
+        position: relative;
+        isolation: isolate;
+      }
+
+      .section-video {
+        position: absolute;
+        z-index: -1;
+        overflow: hidden;
+        width: clamp(320px, 44vw, 620px);
+        aspect-ratio: 16 / 10;
+        border-radius: 28px;
+        pointer-events: none;
+        mask-image: radial-gradient(ellipse at 56% 48%, black 0 34%, rgba(0, 0, 0, 0.7) 52%, transparent 78%);
+        -webkit-mask-image: radial-gradient(ellipse at 56% 48%, black 0 34%, rgba(0, 0, 0, 0.7) 52%, transparent 78%);
+      }
+
+      .section-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.82) contrast(1.12) brightness(0.96);
+        opacity: 0.62;
+        transform: scale(1.035);
+      }
+
+      .section-video--hero {
+        top: clamp(3.25rem, 12vh, 7rem);
+        right: clamp(-2rem, 2vw, 2rem);
+        width: clamp(340px, 46vw, 640px);
+      }
+
+      .section-video--concerts {
+        --focus-x: 58%;
+        --focus-y: 46%;
+        top: 50%;
+        right: clamp(-4rem, -3vw, -1.5rem);
+        width: clamp(660px, 78vw, 1120px);
+        aspect-ratio: 16 / 9;
+        transform: translateY(-50%);
+        mask-image:
+          linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 0.28) 7%, black 20%, black 82%, rgba(0, 0, 0, 0.28) 93%, transparent 100%),
+          linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.3) 8%, black 22%, black 78%, rgba(0, 0, 0, 0.3) 92%, transparent 100%),
+          radial-gradient(ellipse at var(--focus-x) var(--focus-y), black 0 56%, rgba(0, 0, 0, 0.78) 74%, transparent 96%);
+        -webkit-mask-image:
+          linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 0.28) 7%, black 20%, black 82%, rgba(0, 0, 0, 0.28) 93%, transparent 100%),
+          linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.3) 8%, black 22%, black 78%, rgba(0, 0, 0, 0.3) 92%, transparent 100%),
+          radial-gradient(ellipse at var(--focus-x) var(--focus-y), black 0 56%, rgba(0, 0, 0, 0.78) 74%, transparent 96%);
+        mask-composite: intersect;
+        -webkit-mask-composite: source-in, source-in;
+      }
+
+      .section-video--concerts video {
+        filter: saturate(0.98) contrast(1.12) brightness(1.08);
+        opacity: 0.78;
+        transform: none;
+      }
+
+      .section-video--about {
+        --focus-x: 36%;
+        --focus-y: 34%;
+        top: clamp(0.5rem, 5%, 2rem);
+        right: clamp(-5rem, -4vw, -2rem);
+        width: clamp(640px, 74vw, 1080px);
+        mask-image:
+          linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 0.15) 8%, black 24%),
+          linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.2) 10%, black 28%),
+          radial-gradient(ellipse at var(--focus-x) var(--focus-y), black 0 38%, rgba(0, 0, 0, 0.72) 58%, transparent 84%);
+        -webkit-mask-image:
+          linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 0.15) 8%, black 24%),
+          linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.2) 10%, black 28%),
+          radial-gradient(ellipse at var(--focus-x) var(--focus-y), black 0 38%, rgba(0, 0, 0, 0.72) 58%, transparent 84%);
+        mask-composite: intersect;
+        -webkit-mask-composite: source-in, source-in;
+      }
+
+      @media (max-width: 640px) {
+        .hero,
+        .section {
+          overflow: hidden;
+        }
+
+        .section-video {
+          z-index: 0;
+          width: min(72vw, 310px);
+          aspect-ratio: 4 / 3;
+          border-radius: 18px;
+          opacity: 0.96;
+          mask-image: radial-gradient(ellipse at 52% 40%, black 0 34%, rgba(0, 0, 0, 0.72) 56%, transparent 82%);
+          -webkit-mask-image: radial-gradient(ellipse at 52% 40%, black 0 34%, rgba(0, 0, 0, 0.72) 56%, transparent 82%);
+          mask-composite: add;
+          -webkit-mask-composite: source-over;
+        }
+
+        .section-video video {
+          opacity: 0.74;
+          transform: scale(1.015);
+        }
+
+        .section-video--hero,
+        .section-video--about {
+          top: 1rem;
+          right: -3vw;
+          left: auto;
+          transform: none;
+        }
+
+        .section-video--concerts {
+          top: 50%;
+          right: -4vw;
+          left: auto;
+          transform: translateY(-50%);
+        }
+
+        .section-video--concerts video {
+          transform: none;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css?v=20260611-artistphotos1" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#hero" aria-label="Cortado con Brio home">
+          <span class="brand-mark">CCB</span>
+          <span class="brand-copy">
+            <strong>Cortado con Brio</strong>
+            <span>Chamber music, reframed</span>
+          </span>
+        </a>
+
+        <nav class="topnav" aria-label="Primary">
+          <a href="#concerts">CONCERTS</a>
+          <a href="#programs">PROGRAMS</a>
+          <a href="#ensemble">THE ENSEMBLE</a>
+          <a href="#artists">ARTISTS</a>
+          <a href="#booking">BOOKING</a>
+        </nav>
+      </header>
+
+      <main id="hero">
+        <section class="hero">
+          <div class="section-video section-video--hero" aria-hidden="true">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="https://assets.mixkit.co/videos/21758/21758-thumb-720-0.jpg"
+              tabindex="-1"
+            >
+              <source
+                src="https://assets.mixkit.co/videos/21758/21758-720.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+
+          <div class="hero-copy">
+            <p class="eyebrow">Season 2026 · Vienna based · Touring Europe</p>
+            <h1>Where chamber music feels immediate.</h1>
+            <p class="lede">
+              Cortado con Brio presents intimate performances for concert halls,
+              galleries, private salons, and brand events. The sound is classical,
+              the framing is cinematic, and the atmosphere stays with the audience
+              after the last note.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button--primary" href="#programs">Explore programs</a>
+              <a class="button button--ghost" href="#booking">Book the ensemble</a>
+            </div>
+
+            <dl class="hero-facts">
+              <div>
+                <dt>Flexible ensemble</dt>
+                <dd>Trio, quartet, or extended chamber line-up</dd>
+              </div>
+              <div>
+                <dt>Programs</dt>
+                <dd>Baroque clarity to contemporary commissions</dd>
+              </div>
+              <div>
+                <dt>Formats</dt>
+                <dd>Concerts, salons, recordings, and special events</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="section section--band" data-reveal>
+          <p class="band-text">
+            Bach / Mozart / Schubert / Debussy / Ravel / Pärt / new commissions /
+            intimate stages / gallery nights
+          </p>
+        </section>
+
+        <section class="section concerts-section" id="concerts" data-reveal>
+          <div class="section-video section-video--concerts" aria-hidden="true">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="https://assets.mixkit.co/videos/41711/41711-thumb-720-0.jpg"
+              tabindex="-1"
+            >
+              <source
+                src="https://assets.mixkit.co/videos/41711/41711-720.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+
+          <div class="concerts-shell">
+            <div class="section-heading concerts-heading">
+              <p class="eyebrow">Previous concerts</p>
+              <h2>Recent rooms, programs, and cultural evenings.</h2>
+              <p>
+                A selected archive of past performances, loaded from a separate
+                concert data file.
+              </p>
+            </div>
+
+            <div class="concert-list" data-concert-list aria-live="polite">
+              <p class="concert-list__status">Loading previous concerts...</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="programs" data-reveal>
+          <div class="section-heading">
+            <p class="eyebrow">Program formats</p>
+            <h2>Three ways to present the ensemble.</h2>
+            <p>
+              Each format is designed to feel polished without becoming
+              over-produced.
+            </p>
+          </div>
+
+          <div class="card-grid card-grid--three">
+            <article class="feature-card">
+              <span class="feature-card__index">01</span>
+              <h3>Concert evenings</h3>
+              <p>
+                Full programs shaped around a venue, audience, and season: from
+                familiar classics to contemporary works.
+              </p>
+              <ul class="chip-list" aria-label="Concert evening highlights">
+                <li>60-90 min</li>
+                <li>Intermission optional</li>
+                <li>Custom repertoire</li>
+              </ul>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-card__index">02</span>
+              <h3>Salon sessions</h3>
+              <p>
+                A shorter, intimate format for private rooms, galleries, product
+                launches, and civic events.
+              </p>
+              <ul class="chip-list" aria-label="Salon session highlights">
+                <li>Compact setup</li>
+                <li>Elegant staging</li>
+                <li>Audience close-up</li>
+              </ul>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-card__index">03</span>
+              <h3>Press-ready moments</h3>
+              <p>
+                Performance footage, stills, and short-form clips captured in a
+                way that fits both culture media and modern campaigns.
+              </p>
+              <ul class="chip-list" aria-label="Press-ready highlights">
+                <li>Short clips</li>
+                <li>Media kit</li>
+                <li>Social-friendly assets</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section split" id="ensemble" data-reveal>
+          <div class="section-video section-video--about" aria-hidden="true">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="https://assets.mixkit.co/videos/638/638-thumb-720-0.jpg"
+              tabindex="-1"
+            >
+              <source
+                src="https://assets.mixkit.co/videos/638/638-360.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+
+          <div class="split-copy">
+            <p class="eyebrow">About the ensemble</p>
+            <h2>Close enough to feel human, refined enough to suit a contemporary brand.</h2>
+            <p>
+              Cortado con Brio keeps the performance language elegant and direct. The
+              repertoire is rooted in the classical canon, but the presentation is
+              designed to resonate in modern venues and digital campaigns.
+            </p>
+            <p>
+              The visual identity leans into shadow, brass light, and partial
+              glimpses of musicians at work, so the page feels alive without
+              becoming visually noisy.
+            </p>
+            <p>
+              The ensemble traces its public chamber-music language to the Vienna
+              Chamber Players, founded in 2017 by violinist Huiseung Yoo and
+              clarinetist Helmut Hödl.
+            </p>
+
+            <div class="quote-panel">
+              <p>
+                We favor intimacy over spectacle, clarity over ornament, and
+                resonance over noise.
+              </p>
+            </div>
+          </div>
+
+          <div class="split-panel">
+            <div class="artist-photo-panel" aria-label="Vienna Chamber Players visual archive">
+              <figure class="artist-photo artist-photo--wide">
+                <img
+                  src="https://www.hoedl-music.com/wp-content/uploads/2024/01/VCP-1536x821.jpg"
+                  alt="Vienna Chamber Players ensemble portrait"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Vienna Chamber Players. Source:
+                  <a href="https://www.hoedl-music.com/en/2024/01/20/vienna-chamber-players/" target="_blank" rel="noreferrer">
+                    Helmut Hödl
+                  </a>
+                </figcaption>
+              </figure>
+            </div>
+
+            <article class="panel-card panel-card--grid">
+              <div>
+                <strong>Repertoire</strong>
+                <span>Bach to new commissions</span>
+              </div>
+              <div>
+                <strong>Coverage</strong>
+                <span>Europe-wide travel</span>
+              </div>
+              <div>
+                <strong>Deliverables</strong>
+                <span>Performance, promo clips, press notes</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section artists-section" id="artists" data-reveal>
+          <div class="section-heading artists-heading">
+            <p class="eyebrow">Artists</p>
+            <h2>The Vienna Chamber Players lineup behind Cortado con Brio.</h2>
+            <p>
+              Mini profiles based on the published Vienna Chamber Players lineup
+              on Helmut Hödl's project page. Archived event lineups vary, so this
+              section uses the directly listed ensemble members as the baseline.
+            </p>
+          </div>
+
+          <div class="artist-profile-grid" aria-label="Artist mini profiles">
+            <article class="artist-profile-card artist-profile-card--lead">
+              <figure class="artist-profile-card__media artist-profile-card__media--huiseung">
+                <img
+                  src="https://www.sovop.at/web/files/uploads/fl-135942336585b139188ca8.jpg"
+                  alt="Huiseung Yoo portrait"
+                  loading="lazy"
+                />
+              </figure>
+              <p class="artist-profile-card__instrument">Violin</p>
+              <h3>Huiseung Yoo</h3>
+              <p>
+                Founding violinist of Vienna Chamber Players and listed by SOVOP
+                as 1. Violin / First Chair at the Volksoper orchestra.
+              </p>
+            </article>
+
+            <article class="artist-profile-card">
+              <figure class="artist-profile-card__media artist-profile-card__media--dejana">
+                <img
+                  src="https://www.sovop.at/web/files/uploads/fl-1292586479585b1cca18025.jpg"
+                  alt="Dejana Goločevac portrait"
+                  loading="lazy"
+                />
+              </figure>
+              <p class="artist-profile-card__instrument">Violin</p>
+              <h3>Dejana Goločevac</h3>
+              <p>
+                Second violin voice in the Vienna Chamber Players lineup, shaping
+                the ensemble's compact string sound and chamber balance.
+              </p>
+            </article>
+
+            <article class="artist-profile-card">
+              <figure class="artist-profile-card__media artist-profile-card__media--peter">
+                <img
+                  src="https://www.sovop.at/web/files/uploads/fl-768668909585b20c424bfd.jpg"
+                  alt="Peter Sagaischek portrait"
+                  loading="lazy"
+                />
+              </figure>
+              <p class="artist-profile-card__instrument">Viola</p>
+              <h3>Peter Sagaischek</h3>
+              <p>
+                Violist of Vienna Chamber Players, anchoring the inner register
+                and the ensemble's warm Viennese chamber color.
+              </p>
+            </article>
+
+            <article class="artist-profile-card">
+              <figure class="artist-profile-card__media artist-profile-card__media--benedikt">
+                <img
+                  src="https://www.sovop.at/web/files/uploads/fl-11960254066f6bd043e053.jpg"
+                  alt="Benedikt Hellsberg portrait"
+                  loading="lazy"
+                />
+              </figure>
+              <p class="artist-profile-card__instrument">Violoncello</p>
+              <h3>Benedikt Hellsberg</h3>
+              <p>
+                Cellist in the published Vienna Chamber Players lineup, providing
+                the lyrical bass foundation for string-led programs.
+              </p>
+            </article>
+
+            <article class="artist-profile-card">
+              <figure class="artist-profile-card__media artist-profile-card__media--tomas">
+                <img
+                  src="https://www.sovop.at/web/files/uploads/fl-2107665706585b2b264ed38.jpg"
+                  alt="Tomáš Petőcz portrait"
+                  loading="lazy"
+                />
+              </figure>
+              <p class="artist-profile-card__instrument">Double bass</p>
+              <h3>Tomáš Petőcz</h3>
+              <p>
+                Double bassist in the ensemble lineup, extending the group toward
+                a flexible chamber-orchestral sonority.
+              </p>
+            </article>
+
+            <article class="artist-profile-card">
+              <figure class="artist-profile-card__media artist-profile-card__media--helmut">
+                <img
+                  src="https://www.sovop.at/web/files/uploads/fl-1512515723585b35853eac9.jpg"
+                  alt="Helmut Hödl portrait"
+                  loading="lazy"
+                />
+              </figure>
+              <p class="artist-profile-card__instrument">Clarinet</p>
+              <h3>Helmut Hödl</h3>
+              <p>
+                Co-founder, clarinetist, arranger, and composer for Vienna
+                Chamber Players, connecting classical repertoire with new
+                arrangements.
+              </p>
+            </article>
+          </div>
+
+          <p class="artists-source-note">
+            Sources:
+            <a href="https://www.hoedl-music.com/en/2024/01/20/vienna-chamber-players/" target="_blank" rel="noreferrer">
+              Helmut Hödl / Vienna Chamber Players
+            </a>
+            and SOVOP profiles for
+            <a href="https://www.sovop.at/en/orchestra/huiseung%2Byoo/" target="_blank" rel="noreferrer">
+              Huiseung Yoo
+            </a>,
+            <a href="https://www.sovop.at/orchester/dejana%2Bgolo%C4%8Devac/" target="_blank" rel="noreferrer">
+              Dejana Goločevac
+            </a>,
+            <a href="https://www.sovop.at/orchester/peter%2Bsagaischek/" target="_blank" rel="noreferrer">
+              Peter Sagaischek
+            </a>,
+            <a href="https://www.sovop.at/orchester/benedikt%2Bhellsberg/" target="_blank" rel="noreferrer">
+              Benedikt Hellsberg
+            </a>,
+            <a href="https://www.sovop.at/orchester/tom%C3%A1%C5%A1+pet%C5%91cz/" target="_blank" rel="noreferrer">
+              Tomáš Petőcz
+            </a>,
+            and
+            <a href="https://www.sovop.at/orchester/helmut%2Bh%C3%B6dl/" target="_blank" rel="noreferrer">
+              Helmut Hödl
+            </a>.
+          </p>
+        </section>
+
+        <section class="section cta-panel" id="booking" data-reveal>
+          <div class="cta-panel__copy">
+            <p class="eyebrow">Booking</p>
+            <h2>Ready for a program that looks as polished as it sounds?</h2>
+            <p>
+              We can tailor line-up, length, and repertoire to the venue or
+              campaign. Press kits and sample set lists are available on request.
+            </p>
+          </div>
+
+          <div class="cta-panel__actions">
+            <a class="button button--primary" href="mailto:bookings@cortadoconbrio.com">
+              Email bookings
+            </a>
+            <a class="button button--ghost" href="#hero">Back to top</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Cortado con Brio</p>
+        <p>Chamber music, reframed for modern stages.</p>
+      </footer>
+    </div>
+
+    <script src="script.js?v=20260606-concerts1"></script>
+  </body>
+</html>

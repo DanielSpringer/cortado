@@ -1,0 +1,58 @@
+{
+  "concerts": [
+    {
+      "date": "2026-05-18",
+      "title": "Nocturne Salon",
+      "venue": "Palais Ehrbar",
+      "city": "Vienna",
+      "country": "Austria",
+      "program": "Schubert, Ravel, Paert",
+      "format": "Private salon"
+    },
+    {
+      "date": "2026-05-18",
+      "title": "Nocturne Salon",
+      "venue": "Palais Ehrbar",
+      "city": "Vienna",
+      "country": "Austria",
+      "program": "Schubert, Ravel, Paert",
+      "format": "Private salon"
+    },
+    {
+      "date": "2026-04-09",
+      "title": "Gallery Night",
+      "venue": "Atelier am Donaukanal",
+      "city": "Vienna",
+      "country": "Austria",
+      "program": "Bach, Debussy, new commission",
+      "format": "Gallery performance"
+    },
+    {
+      "date": "2026-02-21",
+      "title": "Winter Chamber Evening",
+      "venue": "Haus der Musik",
+      "city": "Vienna",
+      "country": "Austria",
+      "program": "Mozart, Schubert, Ravel",
+      "format": "Concert evening"
+    },
+    {
+      "date": "2025-11-14",
+      "title": "Modern Classics",
+      "venue": "Kulturhaus Brotfabrik",
+      "city": "Vienna",
+      "country": "Austria",
+      "program": "Debussy, Paert, contemporary miniatures",
+      "format": "Public concert"
+    },
+    {
+      "date": "2025-09-27",
+      "title": "Salon for Strings",
+      "venue": "Private residence",
+      "city": "Graz",
+      "country": "Austria",
+      "program": "Bach, Mozart, Schubert",
+      "format": "Salon session"
+    }
+  ]
+}
