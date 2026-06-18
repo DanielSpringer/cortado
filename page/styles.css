@@ -142,8 +142,10 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 5.6rem;
+  flex: 0 0 auto;
+  min-width: 7rem;
   height: 4.25rem;
+  padding-inline: 1rem;
   border-radius: 24px;
   border: 1px solid rgba(216, 173, 114, 0.18);
   background:
@@ -160,6 +162,7 @@ a {
   letter-spacing: 0.075em;
   line-height: 1;
   text-indent: 0.08em;
+  white-space: nowrap;
   text-shadow: 0 1px 18px rgba(216, 173, 114, 0.22);
 }
 
@@ -1165,10 +1168,11 @@ html:not(.js) [data-reveal] {
   }
 
   .brand-mark {
-    width: 4.65rem;
+    min-width: 5.85rem;
     height: 3.55rem;
+    padding-inline: 0.8rem;
     border-radius: 20px;
-    font-size: 1.34rem;
+    font-size: 1.18rem;
   }
 
   .brand-copy strong {

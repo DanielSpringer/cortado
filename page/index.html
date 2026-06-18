@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Cortado con Brio is a modern classical music landing page designed to promote concerts, bookings, and private events."
+      content="Cortado is a modern classical music landing page designed to promote concerts, bookings, and private events."
     />
-    <title>Cortado con Brio | Chamber music, reframed</title>
+    <title>Cortado | Chamber music, reframed</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -135,15 +135,22 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="styles.css?v=20260611-artistphotos1" />
+    <script>
+      (function () {
+        var cacheBuster = Date.now();
+        document.write(
+          '<link rel="stylesheet" href="styles.css?v=' + cacheBuster + '">'
+        );
+      })();
+    </script>
   </head>
   <body>
     <div class="site-shell">
       <header class="topbar">
-        <a class="brand" href="#hero" aria-label="Cortado con Brio home">
-          <span class="brand-mark">CCB</span>
+        <a class="brand" href="#hero" aria-label="Cortado home">
+          <span class="brand-mark">Cortado</span>
           <span class="brand-copy">
-            <strong>Cortado con Brio</strong>
+            <strong>Cortado</strong>
             <span>Chamber music, reframed</span>
           </span>
         </a>
@@ -180,7 +187,7 @@
             <p class="eyebrow">Season 2026 · Vienna based · Touring Europe</p>
             <h1>Where chamber music feels immediate.</h1>
             <p class="lede">
-              Cortado con Brio presents intimate performances for concert halls,
+              Cortado presents sexy performances for concert halls,
               galleries, private salons, and brand events. The sound is classical,
               the framing is cinematic, and the atmosphere stays with the audience
               after the last note.
@@ -326,7 +333,7 @@
             <p class="eyebrow">About the ensemble</p>
             <h2>Close enough to feel human, refined enough to suit a contemporary brand.</h2>
             <p>
-              Cortado con Brio keeps the performance language elegant and direct. The
+              Cortado keeps the performance language elegant and direct. The
               repertoire is rooted in the classical canon, but the presentation is
               designed to resonate in modern venues and digital campaigns.
             </p>
@@ -353,15 +360,12 @@
             <div class="artist-photo-panel" aria-label="Vienna Chamber Players visual archive">
               <figure class="artist-photo artist-photo--wide">
                 <img
-                  src="https://www.hoedl-music.com/wp-content/uploads/2024/01/VCP-1536x821.jpg"
+                  src="../pictures/VCP33.jpg"
                   alt="Vienna Chamber Players ensemble portrait"
                   loading="lazy"
                 />
                 <figcaption>
-                  Vienna Chamber Players. Source:
-                  <a href="https://www.hoedl-music.com/en/2024/01/20/vienna-chamber-players/" target="_blank" rel="noreferrer">
-                    Helmut Hödl
-                  </a>
+                  Photo by Hubi
                 </figcaption>
               </figure>
             </div>
@@ -386,7 +390,7 @@
         <section class="section artists-section" id="artists" data-reveal>
           <div class="section-heading artists-heading">
             <p class="eyebrow">Artists</p>
-            <h2>The Vienna Chamber Players lineup behind Cortado con Brio.</h2>
+            <h2>The Vienna Chamber Players lineup behind Cortado.</h2>
             <p>
               Mini profiles based on the published Vienna Chamber Players lineup
               on Helmut Hödl's project page. Archived event lineups vary, so this
@@ -541,7 +545,7 @@
       </main>
 
       <footer class="footer">
-        <p>Cortado con Brio</p>
+        <p>Cortado</p>
         <p>Chamber music, reframed for modern stages.</p>
       </footer>
     </div>
