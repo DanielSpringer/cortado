@@ -39,8 +39,8 @@ body {
   overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
-  font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: "Avenir Next Condensed", "Avenir Next", "Helvetica Neue", Arial,
+    sans-serif;
   line-height: 1.55;
   position: relative;
   isolation: isolate;
@@ -156,7 +156,8 @@ a {
     0 20px 48px rgba(0, 0, 0, 0.22),
     0 0 42px rgba(216, 173, 114, 0.1);
   color: #f7d7a1;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Avenir Next Condensed", "Avenir Next", "Helvetica Neue", Arial,
+    sans-serif;
   font-size: 1.7rem;
   font-weight: 700;
   letter-spacing: 0.075em;
@@ -308,7 +309,8 @@ main {
 .split-copy h2,
 .cta-panel h2 {
   margin: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Avenir Next Condensed", "Avenir Next", "Helvetica Neue", Arial,
+    sans-serif;
   font-weight: 600;
   line-height: 0.92;
   letter-spacing: -0.04em;
@@ -603,7 +605,8 @@ main {
 
 .concert-date__day {
   color: var(--accent-strong);
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Avenir Next Condensed", "Avenir Next", "Helvetica Neue", Arial,
+    sans-serif;
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 0.9;
@@ -941,7 +944,8 @@ main {
 
 .artist-profile-card h3 {
   margin: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Avenir Next Condensed", "Avenir Next", "Helvetica Neue", Arial,
+    sans-serif;
   font-size: clamp(1.85rem, 2.6vw, 2.65rem);
   font-weight: 600;
   line-height: 0.95;
